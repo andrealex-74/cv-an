@@ -3,104 +3,223 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>André Naranjo | Ingeniero de Sistemas y Redes</title>
+    <title>André Naranjo Chacón | Ingeniero de Telecomunicaciones</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <style>
-        body { background-color: #0a0a0a; color: #e5e5e5; }
-        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
-        .accent-glow { text-shadow: 0 0 15px rgba(255, 255, 255, 0.3); }
+        body { background-color: #050505; color: #f0f0f0; overflow-x: hidden; }
+        .glass { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.08); transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+        .glass:hover { border-color: rgba(255, 255, 255, 0.3); transform: translateY(-5px); box-shadow: 0 10px 30px -10px rgba(255,255,255,0.1); }
+        .text-gradient { background: linear-gradient(to right, #ffffff, #888888); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .qr-placeholder { border: 2px dashed rgba(255,255,255,0.2); transition: all 0.3s ease; }
+        .qr-placeholder:hover { border-color: #fff; background: rgba(255,255,255,0.05); }
     </style>
 </head>
 <body class="font-sans antialiased">
 
-    <header class="min-h-[70vh] flex flex-col justify-center items-center px-6 border-b border-white/10">
-        <div class="max-w-3xl text-center">
-            <h1 class="text-5xl md:text-7xl font-bold tracking-tighter text-white mb-4 accent-glow">
-                André Naranjo
+    <nav class="fixed top-6 left-1/2 -translate-x-1/2 z-50 glass px-6 py-3 rounded-full flex gap-6 text-sm font-medium">
+        <a href="#perfil" class="hover:text-white text-gray-400 transition">Perfil</a>
+        <a href="#proyectos" class="hover:text-white text-gray-400 transition">Proyectos</a>
+        <a href="#experiencia" class="hover:text-white text-gray-400 transition">Trayectoria</a>
+        <a href="#contacto" class="hover:text-white text-gray-400 transition">Contacto</a>
+    </nav>
+
+    <section id="perfil" class="min-h-screen flex flex-col justify-center items-center px-6 text-center relative">
+        <div data-aos="fade-up" data-aos-duration="1000">
+            <h1 class="text-6xl md:text-8xl font-bold tracking-tighter text-gradient mb-4">
+                André Naranjo Chacón
             </h1>
-            <p class="text-xl md:text-2xl text-gray-400 font-light mb-8">
-                Ingeniero en Telecomunicaciones | 4+ años de experiencia en Software & Sistemas
+            <p class="text-xl md:text-2xl text-gray-400 font-light max-w-2xl mx-auto mb-8">
+                Ingeniero en Telecomunicaciones especializado en el despliegue de infraestructuras críticas y soluciones digitales end-to-end.
             </p>
-            <div class="flex flex-wrap justify-center gap-4">
-                <span class="px-3 py-1 bg-white/10 rounded-full text-xs uppercase tracking-widest text-gray-300">Networking</span>
-                <span class="px-3 py-1 bg-white/10 rounded-full text-xs uppercase tracking-widest text-gray-300">Backend</span>
-                <span class="px-3 py-1 bg-white/10 rounded-full text-xs uppercase tracking-widest text-gray-300">SaaS Deployment</span>
+            
+            <div class="flex flex-wrap justify-center gap-3 mb-10">
+                <span class="px-4 py-1.5 bg-white/5 rounded-full text-xs font-bold uppercase tracking-widest border border-white/10">Telecomunicaciones</span>
+                <span class="px-4 py-1.5 bg-white/5 rounded-full text-xs font-bold uppercase tracking-widest border border-white/10">Redes y Sistemas</span>
+                <span class="px-4 py-1.5 bg-white/5 rounded-full text-xs font-bold uppercase tracking-widest border border-white/10">Fullstack Dev</span>
+            </div>
+
+            <div class="flex justify-center gap-6 text-2xl">
+                <a href="https://linkedin.com/in/andre-naranjo18" target="_blank" class="hover:text-blue-400 transition"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/andrealex-74" target="_blank" class="hover:text-gray-400 transition"><i class="fa-brands fa-github"></i></a>
+                <a href="mailto:andre.naranjo18@hotmail.com" class="hover:text-red-400 transition"><i class="fa-solid fa-envelope"></i></a>
             </div>
         </div>
-    </header>
 
-    <main class="max-w-5xl mx-auto px-6 py-20">
-        
-        <section class="grid md:grid-cols-3 gap-8 mb-24">
-            <div class="glass p-8 rounded-2xl">
-                <h3 class="text-white font-bold mb-4">Redes y Sistemas</h3>
-                <p class="text-sm text-gray-400 leading-relaxed">Experto en configuración Cisco, análisis con Wireshark y administración de servidores Linux vía terminal. Sólida base en protocolos TCP/IP.</p>
+        <div class="mt-16 text-center" data-aos="fade-in" data-aos-delay="500">
+            <p class="text-[10px] text-gray-500 uppercase tracking-widest mb-4">Descarga mi CV actualizado</p>
+            <div class="qr-placeholder w-32 h-32 mx-auto rounded-xl flex items-center justify-center p-2">
+                <i class="fa-solid fa-qrcode text-4xl opacity-20"></i>
             </div>
-            <div class="glass p-8 rounded-2xl">
-                <h3 class="text-white font-bold mb-4">Desarrollo Backend</h3>
-                <p class="text-sm text-gray-400 leading-relaxed">Arquitecturas escalables con Node.js (Hono) y Python. Diseño de APIs REST seguras y gestión de bases de datos PostgreSQL/MySQL.</p>
-            </div>
-            <div class="glass p-8 rounded-2xl">
-                <h3 class="text-white font-bold mb-4">Cloud & DevOps</h3>
-                <p class="text-sm text-gray-400 leading-relaxed">Despliegue de aplicaciones en producción utilizando Vercel, Railway y Supabase con flujos de CI/CD automáticos.</p>
-            </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="mb-24">
-            <h2 class="text-3xl font-bold text-white mb-12 flex items-center">
-                <span class="w-8 h-[1px] bg-white mr-4"></span> Proyectos en Producción
-            </h2>
+    <section class="max-w-6xl mx-auto px-6 py-24">
+        <div class="grid md:grid-cols-3 gap-10">
+            <div class="glass p-8 rounded-3xl" data-aos="fade-right">
+                <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-6 text-xl">
+                    <i class="fa-solid fa-network-wired text-white"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-4">Redes y Sistemas</h3>
+                <ul class="text-sm text-gray-400 space-y-2">
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[10px]"></i> Configuración Dispositivos Cisco</li>
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[10px]"></i> Análisis de tráfico (Wireshark)</li>
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[10px]"></i> Admin Linux (SSH, Terminal)</li>
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[10px]"></i> Virtualización y Hardening</li>
+                </ul>
+            </div>
             
-            <div class="space-y-6">
-                <div class="glass p-8 rounded-2xl hover:bg-white/5 transition-colors">
-                    <div class="flex flex-col md:flex-row justify-between mb-4">
-                        <h3 class="text-xl font-bold text-white">SaaS de Fidelización de Clientes</h3>
-                        <span class="text-gray-500 text-sm">Stack: Node.js, Supabase, Railway</span>
+            <div class="glass p-8 rounded-3xl" data-aos="fade-up">
+                <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-6 text-xl">
+                    <i class="fa-solid fa-code text-white"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-4">Desarrollo Web</h3>
+                <ul class="text-sm text-gray-400 space-y-2">
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[10px]"></i> Arquitectura Node.js / Hono</li>
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[10px]"></i> APIs REST seguras (JWT/Bcrypt)</li>
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[10px]"></i> PostgreSQL con RLS (Supabase)</li>
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[10px]"></i> Frontend ligero (Vanilla JS)</li>
+                </ul>
+            </div>
+
+            <div class="glass p-8 rounded-3xl" data-aos="fade-left">
+                <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-6 text-xl">
+                    <i class="fa-solid fa-cloud-arrow-up text-white"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-4">Cloud & DevOps</h3>
+                <ul class="text-sm text-gray-400 space-y-2">
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[10px]"></i> Gestión Railway & Vercel</li>
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[10px]"></i> Flujos CI/CD Automáticos</li>
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[10px]"></i> Monitoreo de Infraestructura</li>
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[10px]"></i> Automatización con Bash/Python</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="proyectos" class="max-w-6xl mx-auto px-6 py-24">
+        <h2 class="text-4xl font-bold mb-16 text-center" data-aos="fade-up">Proyectos Desplegados</h2>
+        
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="glass p-10 rounded-[2.5rem] flex flex-col justify-between" data-aos="zoom-in-right">
+                <div>
+                    <span class="text-xs text-gray-500 uppercase tracking-widest font-bold">SaaS / Producción</span>
+                    <h3 class="text-3xl font-bold my-4">Sistema Fidely</h3>
+                    <p class="text-gray-400 mb-8 leading-relaxed">Software de fidelización para negocios locales. Backend robusto en Node.js, cifrado de datos y automatización de reportes PDF semanales.</p>
+                </div>
+                <a href="https://fidely-landing-woad.vercel.app/" target="_blank" class="inline-flex items-center gap-3 bg-white text-black px-6 py-3 rounded-2xl font-bold hover:bg-gray-200 transition w-fit">
+                    Visitar Proyecto <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
+                </a>
+            </div>
+
+            <div class="glass p-10 rounded-[2.5rem] flex flex-col justify-between" data-aos="zoom-in-left">
+                <div>
+                    <span class="text-xs text-gray-500 uppercase tracking-widest font-bold">Travel Tech</span>
+                    <h3 class="text-3xl font-bold my-4">Lokyo App</h3>
+                    <p class="text-gray-400 mb-8 leading-relaxed">Plataforma para conectar turistas con guías locales. Arquitectura orientada a la velocidad y optimización de carga móvil.</p>
+                </div>
+                <a href="https://lokyo.vercel.app/" target="_blank" class="inline-flex items-center gap-3 border border-white/20 px-6 py-3 rounded-2xl font-bold hover:bg-white/10 transition w-fit">
+                    Visitar App <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="experiencia" class="max-w-4xl mx-auto px-6 py-24">
+        <div class="space-y-24">
+            <div data-aos="fade-up">
+                <div class="flex flex-col md:flex-row justify-between mb-8 items-start md:items-end">
+                    <div>
+                        <h4 class="text-gray-500 text-xs uppercase tracking-widest mb-1">Experiencia Profesional</h4>
+                        <h3 class="text-3xl font-bold text-white">Supervisor de Laboratorio RF</h3>
                     </div>
-                    <p class="text-gray-400 mb-4">Solución completa end-to-end que resuelve la recurrencia en comercios físicos. Implementa Row Level Security (RLS), autenticación JWT y generación automatizada de reportes PDF.</p>
-                    <div class="flex gap-2">
-                        <span class="text-[10px] border border-white/20 px-2 py-0.5 rounded text-gray-400">PostgreSQL</span>
-                        <span class="text-[10px] border border-white/20 px-2 py-0.5 rounded text-gray-400">API REST</span>
-                        <span class="text-[10px] border border-white/20 px-2 py-0.5 rounded text-gray-400">FingerprintJS</span>
+                    <div class="text-right mt-4 md:mt-0">
+                        <p class="text-white font-bold">Escuela Politécnica Nacional</p>
+                        <p class="text-gray-500 text-sm">Quito | 2022 — 2023</p>
                     </div>
                 </div>
+                <ul class="text-gray-400 space-y-4 border-l-2 border-white/5 pl-8">
+                    <li>• Coordinación de entornos técnicos complejos y optimización de procesos operativos.</li>
+                    <li>• Gestión de recursos e inventario de infraestructura tecnológica.</li>
+                    <li>• Soporte técnico a proyectos académicos y tecnológicos.</li>
+                    <li>• Implementación de metodologías para asegurar calidad en sistemas de comunicaciones.</li>
+                </ul>
+            </div>
 
-                <div class="glass p-8 rounded-2xl hover:bg-white/5 transition-colors">
-                    <h3 class="text-xl font-bold text-white mb-2">Lokyo</h3>
-                    <p class="text-gray-400">Plataforma turística con arquitectura front-back funcional, enfocada en la experiencia de usuario y rapidez de carga.</p>
-                </div>
-
-                <div class="glass p-8 rounded-2xl hover:bg-white/5 transition-colors">
-                    <h3 class="text-xl font-bold text-white mb-2">Detección de Emociones (IA)</h3>
-                    <p class="text-gray-400">Entrenamiento de modelo YOLO utilizando TensorFlow para clasificación en tiempo real.</p>
+            <div data-aos="fade-up">
+                <h3 class="text-xl font-bold mb-10 flex items-center gap-4">
+                    <span class="w-10 h-[1px] bg-white/20"></span> Formación Académica
+                </h3>
+                <div class="space-y-8">
+                    <div class="flex justify-between">
+                        <div>
+                            <p class="text-white font-bold">Máster en Telecomunicaciones</p>
+                            <p class="text-gray-500 text-sm">Universidad de Sevilla</p>
+                        </div>
+                        <p class="text-gray-500 text-sm">2024 — Presente</p>
+                    </div>
+                    <div class="flex justify-between">
+                        <div>
+                            <p class="text-white font-bold">Ingeniería en Telecomunicaciones</p>
+                            <p class="text-gray-500 text-sm">Escuela Politécnica Nacional</p>
+                        </div>
+                        <p class="text-gray-500 text-sm">2017 — 2023</p>
+                    </div>
                 </div>
             </div>
-        </section>
 
-        <section class="mb-24">
-            <h2 class="text-3xl font-bold text-white mb-12 flex items-center">
-                <span class="w-8 h-[1px] bg-white mr-4"></span> Trayectoria
-            </h2>
-            <div class="border-l border-white/10 ml-4 pl-8 space-y-12">
-                <div class="relative">
-                    <div class="absolute -left-[41px] top-1 w-4 h-4 rounded-full bg-white shadow-[0_0_10px_white]"></div>
-                    <h4 class="text-lg font-bold text-white">Desarrollador Fullstack & Despliegue</h4>
-                    <p class="text-sm text-gray-500 mb-2">HEX S.A. | 2020 — 2023</p>
-                    <p class="text-gray-400 text-sm">Responsable del desarrollo y puesta en producción de múltiples proyectos web nacionales e internacionales. Gestión directa con clientes y trabajo bajo metodología Scrum.</p>
+            <div class="grid md:grid-cols-2 gap-16" data-aos="fade-up">
+                <div>
+                    <h3 class="text-xl font-bold mb-6">Certificaciones 2024</h3>
+                    <ul class="text-sm text-gray-400 space-y-3">
+                        <li><i class="fa-solid fa-certificate mr-2 text-white/40"></i> Networking Devices & Config (Cisco)</li>
+                        <li><i class="fa-solid fa-certificate mr-2 text-white/40"></i> Introduction to Cybersecurity (Cisco)</li>
+                        <li><i class="fa-solid fa-certificate mr-2 text-white/40"></i> Networking (Junio/Julio 2024)</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-6">Idiomas</h3>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-300">Español</span>
+                            <span class="text-[10px] text-gray-500 border border-white/10 px-2 py-0.5 rounded">Nativo</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-300">Inglés</span>
+                            <span class="text-[10px] text-gray-500 border border-white/10 px-2 py-0.5 rounded">Profesional</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-300">Francés</span>
+                            <span class="text-[10px] text-gray-500 border border-white/10 px-2 py-0.5 rounded">Básico</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-    </main>
-
-    <footer class="py-20 text-center border-t border-white/10">
-        <p class="text-gray-500 text-sm mb-4">¿Hablamos?</p>
-        <a href="mailto:andre.naranjo18@hotmail.com" class="text-white text-xl font-bold hover:underline">andre.naranjo18@hotmail.com</a>
-        <div class="mt-8 flex justify-center gap-6">
-            <a href="https://www.linkedin.com/in/andre-naranjo18/" class="text-gray-400 hover:text-white transition-colors">LinkedIn</a>
-            <a href="#" class="text-gray-400 hover:text-white transition-colors">GitHub</a>
+    <footer id="contacto" class="py-32 text-center border-t border-white/5">
+        <div data-aos="zoom-in">
+            <h2 class="text-5xl font-bold mb-8 tracking-tighter text-gradient">¿Iniciamos un proyecto?</h2>
+            <a href="mailto:andre.naranjo18@hotmail.com" class="text-2xl text-white hover:underline block mb-12 font-light tracking-wide">
+                andre.naranjo18@hotmail.com
+            </a>
+            <div class="flex justify-center gap-10 opacity-50">
+                <a href="https://linkedin.com/in/andre-naranjo18" class="hover:opacity-100 transition">LinkedIn</a>
+                <a href="https://github.com/andrealex-74" class="hover:opacity-100 transition">GitHub</a>
+            </div>
+            <p class="text-[10px] text-gray-700 mt-20 uppercase tracking-[0.3em]">Granada, España | 2024</p>
         </div>
     </footer>
 
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+    </script>
 </body>
 </html>
