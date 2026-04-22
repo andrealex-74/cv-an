@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>André Naranjo | Ingeniero de Sistemas y Redes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background-color: #0a0a0a; color: #e5e5e5; }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .accent-glow { text-shadow: 0 0 15px rgba(255, 255, 255, 0.3); }
+    </style>
+</head>
+<body class="font-sans antialiased">
+
+    <header class="min-h-[70vh] flex flex-col justify-center items-center px-6 border-b border-white/10">
+        <div class="max-w-3xl text-center">
+            <h1 class="text-5xl md:text-7xl font-bold tracking-tighter text-white mb-4 accent-glow">
+                André Naranjo
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-400 font-light mb-8">
+                Ingeniero en Telecomunicaciones | 4+ años de experiencia en Software & Sistemas
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <span class="px-3 py-1 bg-white/10 rounded-full text-xs uppercase tracking-widest text-gray-300">Networking</span>
+                <span class="px-3 py-1 bg-white/10 rounded-full text-xs uppercase tracking-widest text-gray-300">Backend</span>
+                <span class="px-3 py-1 bg-white/10 rounded-full text-xs uppercase tracking-widest text-gray-300">SaaS Deployment</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-6 py-20">
+        
+        <section class="grid md:grid-cols-3 gap-8 mb-24">
+            <div class="glass p-8 rounded-2xl">
+                <h3 class="text-white font-bold mb-4">Redes y Sistemas</h3>
+                <p class="text-sm text-gray-400 leading-relaxed">Experto en configuración Cisco, análisis con Wireshark y administración de servidores Linux vía terminal. Sólida base en protocolos TCP/IP.</p>
+            </div>
+            <div class="glass p-8 rounded-2xl">
+                <h3 class="text-white font-bold mb-4">Desarrollo Backend</h3>
+                <p class="text-sm text-gray-400 leading-relaxed">Arquitecturas escalables con Node.js (Hono) y Python. Diseño de APIs REST seguras y gestión de bases de datos PostgreSQL/MySQL.</p>
+            </div>
+            <div class="glass p-8 rounded-2xl">
+                <h3 class="text-white font-bold mb-4">Cloud & DevOps</h3>
+                <p class="text-sm text-gray-400 leading-relaxed">Despliegue de aplicaciones en producción utilizando Vercel, Railway y Supabase con flujos de CI/CD automáticos.</p>
+            </div>
+        </section>
+
+        <section class="mb-24">
+            <h2 class="text-3xl font-bold text-white mb-12 flex items-center">
+                <span class="w-8 h-[1px] bg-white mr-4"></span> Proyectos en Producción
+            </h2>
+            
+            <div class="space-y-6">
+                <div class="glass p-8 rounded-2xl hover:bg-white/5 transition-colors">
+                    <div class="flex flex-col md:flex-row justify-between mb-4">
+                        <h3 class="text-xl font-bold text-white">SaaS de Fidelización de Clientes</h3>
+                        <span class="text-gray-500 text-sm">Stack: Node.js, Supabase, Railway</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">Solución completa end-to-end que resuelve la recurrencia en comercios físicos. Implementa Row Level Security (RLS), autenticación JWT y generación automatizada de reportes PDF.</p>
+                    <div class="flex gap-2">
+                        <span class="text-[10px] border border-white/20 px-2 py-0.5 rounded text-gray-400">PostgreSQL</span>
+                        <span class="text-[10px] border border-white/20 px-2 py-0.5 rounded text-gray-400">API REST</span>
+                        <span class="text-[10px] border border-white/20 px-2 py-0.5 rounded text-gray-400">FingerprintJS</span>
+                    </div>
+                </div>
+
+                <div class="glass p-8 rounded-2xl hover:bg-white/5 transition-colors">
+                    <h3 class="text-xl font-bold text-white mb-2">Lokyo</h3>
+                    <p class="text-gray-400">Plataforma turística con arquitectura front-back funcional, enfocada en la experiencia de usuario y rapidez de carga.</p>
+                </div>
+
+                <div class="glass p-8 rounded-2xl hover:bg-white/5 transition-colors">
+                    <h3 class="text-xl font-bold text-white mb-2">Detección de Emociones (IA)</h3>
+                    <p class="text-gray-400">Entrenamiento de modelo YOLO utilizando TensorFlow para clasificación en tiempo real.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-24">
+            <h2 class="text-3xl font-bold text-white mb-12 flex items-center">
+                <span class="w-8 h-[1px] bg-white mr-4"></span> Trayectoria
+            </h2>
+            <div class="border-l border-white/10 ml-4 pl-8 space-y-12">
+                <div class="relative">
+                    <div class="absolute -left-[41px] top-1 w-4 h-4 rounded-full bg-white shadow-[0_0_10px_white]"></div>
+                    <h4 class="text-lg font-bold text-white">Desarrollador Fullstack & Despliegue</h4>
+                    <p class="text-sm text-gray-500 mb-2">HEX S.A. | 2020 — 2023</p>
+                    <p class="text-gray-400 text-sm">Responsable del desarrollo y puesta en producción de múltiples proyectos web nacionales e internacionales. Gestión directa con clientes y trabajo bajo metodología Scrum.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="py-20 text-center border-t border-white/10">
+        <p class="text-gray-500 text-sm mb-4">¿Hablamos?</p>
+        <a href="mailto:andre.naranjo18@hotmail.com" class="text-white text-xl font-bold hover:underline">andre.naranjo18@hotmail.com</a>
+        <div class="mt-8 flex justify-center gap-6">
+            <a href="https://www.linkedin.com/in/andre-naranjo18/" class="text-gray-400 hover:text-white transition-colors">LinkedIn</a>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors">GitHub</a>
+        </div>
+    </footer>
+
+</body>
+</html>
