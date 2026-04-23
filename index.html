@@ -1,30 +1,419 @@
-<section id="perfil" class="min-h-screen w-full flex flex-col justify-center items-center px-6 text-center relative pt-32 pb-20">
-    <div data-aos="fade-up" data-aos-duration="1200" class="max-w-5xl mt-10 md:mt-20">
-        <h1 class="text-6xl md:text-8xl font-black tracking-tighter text-gradient mb-8 leading-tight pb-4">
-            André Naranjo Chacón
-        </h1>
-        <p class="text-lg md:text-2xl text-gray-400 font-light max-w-2xl mx-auto mb-10 leading-relaxed">
-            Ingeniero en Telecomunicaciones | <span class="text-cyan-400">4+ años</span> de experiencia especializado en el despliegue de infraestructuras y soluciones digitales end-to-end.
-        </p>
-        
-        <div class="flex flex-wrap justify-center gap-2 md:gap-3 mb-12">
-            <span class="px-3 md:px-4 py-1.5 bg-cyan-950/20 rounded-full text-[10px] md:text-xs font-bold uppercase tracking-widest border border-cyan-500/30 text-cyan-400">Telecomunicaciones</span>
-            <span class="px-3 md:px-4 py-1.5 bg-cyan-950/20 rounded-full text-[10px] md:text-xs font-bold uppercase tracking-widest border border-cyan-500/30 text-cyan-400">Redes y Sistemas</span>
-            <span class="px-3 md:px-4 py-1.5 bg-white/5 rounded-full text-[10px] md:text-xs font-bold uppercase tracking-widest border border-white/10 text-gray-300">Fullstack Dev</span>
-            <span class="px-3 md:px-4 py-1.5 bg-white/5 rounded-full text-[10px] md:text-xs font-bold uppercase tracking-widest border border-white/10 text-gray-300">SaaS Deployment</span>
-        </div>
+<!DOCTYPE html>
+<html lang="es">
 
-        <div class="flex justify-center gap-8 text-3xl">
-            <a href="https://linkedin.com/in/andre-naranjo18" target="_blank" class="hover:text-cyan-400 transition-all hover:scale-110"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="https://github.com/andrealex-74" target="_blank" class="hover:text-cyan-400 transition-all hover:scale-110"><i class="fa-brands fa-github"></i></a>
-            <a href="mailto:andre.naranjo18@hotmail.com" class="hover:text-cyan-400 transition-all hover:scale-110"><i class="fa-solid fa-envelope"></i></a>
-        </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>André Naranjo Chacón | Ingeniero de Telecomunicaciones</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+        :root {
+            --tech-color: #06b6d4;
+            /* Cian Tecnológico */
+            --tech-glow: rgba(6, 182, 212, 0.3);
+        }
+
+        body {
+            background-color: #030712;
+            color: #f0f0f0;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Animación de Halos de Luz de fondo */
+        .bg-glow {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+            background: radial-gradient(circle at 50% 50%, #080f1e 0%, #030712 100%);
+        }
+
+        .halo {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, var(--tech-glow) 0%, transparent 70%);
+            border-radius: 50%;
+            filter: blur(80px);
+            animation: move 20s infinite alternate ease-in-out;
+            opacity: 0.4;
+        }
+
+        @keyframes move {
+            0% {
+                transform: translate(-10%, -10%);
+            }
+
+            100% {
+                transform: translate(50%, 40%);
+            }
+        }
+
+        .halo-2 {
+            top: 20%;
+            right: -10%;
+            width: 400px;
+            height: 400px;
+            animation-duration: 15s;
+            animation-delay: -5s;
+        }
+
+        /* Glassmorphism mejorado */
+        .glass {
+            background: rgba(255, 255, 255, 0.01);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.4s ease;
+        }
+
+        .glass:hover {
+            border-color: var(--tech-color);
+            box-shadow: 0 0 20px var(--tech-glow);
+            background: rgba(6, 182, 212, 0.02);
+        }
+
+        /* Navegación */
+        .fixed-nav-container {
+            position: fixed;
+            top: 1.5rem;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            z-index: 100;
+            pointer-events: none;
+        }
+
+        .nav-content {
+            pointer-events: auto;
+            display: flex;
+            gap: 1rem;
+            border: 1px solid rgba(6, 182, 212, 0.2);
+        }
+
+        .text-gradient {
+            background: linear-gradient(to right, #ffffff, var(--tech-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Elementos Tech destacados */
+        .tech-border {
+            border: 1px solid var(--tech-color);
+        }
+
+        .tech-text {
+            color: var(--tech-color);
+            text-shadow: 0 0 10px var(--tech-glow);
+        }
+
+        .tech-bg {
+            background-color: var(--tech-color);
+        }
+
+        .qr-placeholder {
+            border: 2px dashed var(--tech-color);
+            box-shadow: inset 0 0 15px var(--tech-glow);
+        }
+
+        .footer-title {
+            line-height: 1.4;
+            padding-bottom: 0.4em;
+        }
+
+        @media (min-width: 768px) {
+            .nav-content {
+                gap: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body class="font-sans antialiased">
+
+    <div class="bg-glow">
+        <div class="halo"></div>
+        <div class="halo halo-2"></div>
     </div>
 
-    <div class="mt-16 text-center" data-aos="fade-in" data-aos-delay="600">
-        <p class="text-[10px] text-cyan-500/60 uppercase tracking-widest mb-4">Descarga mi CV actualizado</p>
-        <div class="qr-placeholder w-28 h-28 md:w-32 md:h-32 mx-auto rounded-2xl flex items-center justify-center p-2">
-            <i class="fa-solid fa-qrcode text-4xl text-cyan-400 opacity-40"></i>
-        </div>
+    <div class="fixed-nav-container">
+        <nav class="nav-content glass px-6 py-3 rounded-full text-xs md:text-sm font-medium">
+            <a href="#perfil" class="text-gray-400 hover:text-cyan-400 transition-colors">Perfil</a>
+            <a href="#proyectos" class="text-gray-400 hover:text-cyan-400 transition-colors">Proyectos</a>
+            <a href="#experiencia" class="text-gray-400 hover:text-cyan-400 transition-colors">Trayectoria</a>
+            <a href="#contacto" class="text-gray-400 hover:text-cyan-400 transition-colors">Contacto</a>
+        </nav>
     </div>
-</section>
+
+    <section id="perfil"
+        class="min-h-screen w-full flex flex-col justify-center items-center px-6 text-center relative pt-32 pb-20">
+        <div data-aos="fade-up" data-aos-duration="1200" class="max-w-5xl mt-10 md:mt-20">
+            <h1 class="text-6xl md:text-8xl font-black tracking-tighter text-gradient mb-8 leading-tight pb-4">
+                André Naranjo Chacón
+            </h1>
+            <p class="text-lg md:text-2xl text-gray-400 font-light max-w-2xl mx-auto mb-10 leading-relaxed">
+                Ingeniero en Telecomunicaciones | <span class="text-cyan-400">4+ años</span> de experiencia
+                especializado en el despliegue de infraestructuras y soluciones digitales end-to-end.
+            </p>
+
+            <div class="flex flex-wrap justify-center gap-2 md:gap-3 mb-12">
+                <span
+                    class="px-3 md:px-4 py-1.5 bg-cyan-950/20 rounded-full text-[10px] md:text-xs font-bold uppercase tracking-widest border border-cyan-500/30 text-cyan-400">Telecomunicaciones</span>
+                <span
+                    class="px-3 md:px-4 py-1.5 bg-cyan-950/20 rounded-full text-[10px] md:text-xs font-bold uppercase tracking-widest border border-cyan-500/30 text-cyan-400">Redes
+                    y Sistemas</span>
+                <span
+                    class="px-3 md:px-4 py-1.5 bg-white/5 rounded-full text-[10px] md:text-xs font-bold uppercase tracking-widest border border-white/10 text-gray-300">SaaS
+                    Deployment</span>
+            </div>
+
+            <div class="flex justify-center gap-8 text-3xl">
+                <a href="https://linkedin.com/in/andre-naranjo18" target="_blank"
+                    class="hover:text-cyan-400 transition-all hover:scale-110"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/andrealex-74" target="_blank"
+                    class="hover:text-cyan-400 transition-all hover:scale-110"><i class="fa-brands fa-github"></i></a>
+                <a href="mailto:andre.naranjo18@hotmail.com"
+                    class="hover:text-cyan-400 transition-all hover:scale-110"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+
+        <div class="mt-16 text-center" data-aos="fade-in" data-aos-delay="600">
+            <p class="text-[10px] text-cyan-500/60 uppercase tracking-widest mb-4">Descarga mi CV actualizado</p>
+            <div
+                class="qr-placeholder w-28 h-28 md:w-32 md:h-32 mx-auto rounded-2xl flex items-center justify-center p-2">
+                <i class="fa-solid fa-qrcode text-4xl text-cyan-400 opacity-40"></i>
+            </div>
+        </div>
+    </section>
+
+    <div class="relative z-10">
+        <section class="max-w-6xl mx-auto px-6 py-24 border-t border-white/5">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
+                <div class="glass p-8 rounded-3xl" data-aos="fade-up">
+                    <div
+                        class="w-12 h-12 bg-cyan-500/10 rounded-xl flex items-center justify-center mb-6 text-xl text-cyan-400 border border-cyan-500/20">
+                        <i class="fa-solid fa-network-wired"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-white">Redes y Sistemas</h3>
+                    <ul class="text-sm text-gray-400 space-y-2">
+                        <li>• Configuración Dispositivos Cisco</li>
+                        <li>• Análisis de tráfico (Wireshark)</li>
+                        <li>• Admin Linux (SSH, Terminal)</li>
+                        <li>• Virtualización y Hardening</li>
+                    </ul>
+                </div>
+
+                <div class="glass p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="100">
+                    <div
+                        class="w-12 h-12 bg-cyan-500/10 rounded-xl flex items-center justify-center mb-6 text-xl text-cyan-400 border border-cyan-500/20">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-white">Desarrollo Web</h3>
+                    <ul class="text-sm text-gray-400 space-y-2">
+                        <li>• Arquitectura Node.js / Hono</li>
+                        <li>• APIs REST seguras (JWT/Bcrypt)</li>
+                        <li>• PostgreSQL con RLS (Supabase)</li>
+                        <li>• Frontend ligero (Vanilla JS)</li>
+                    </ul>
+                </div>
+
+                <div class="glass p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="200">
+                    <div
+                        class="w-12 h-12 bg-cyan-500/10 rounded-xl flex items-center justify-center mb-6 text-xl text-cyan-400 border border-cyan-500/20">
+                        <i class="fa-solid fa-cloud-arrow-up"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-white">Cloud & DevOps</h3>
+                    <ul class="text-sm text-gray-400 space-y-2">
+                        <li>• Gestión Railway & Vercel</li>
+                        <li>• Flujos CI/CD Automáticos</li>
+                        <li>• Monitoreo de Infraestructura</li>
+                        <li>• Automatización con Bash/Python</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="proyectos" class="max-w-6xl mx-auto px-6 py-24">
+            <h2 class="text-4xl font-bold mb-16 text-center text-white" data-aos="fade-up">Proyectos Desplegados</h2>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="glass p-8 md:p-10 rounded-[2rem] flex flex-col justify-between" data-aos="zoom-in-right">
+                    <div>
+                        <span class="text-xs text-cyan-500 uppercase tracking-widest font-bold">SaaS / Producción</span>
+                        <h3 class="text-2xl md:text-3xl font-bold my-4 text-white">Sistema Fidely</h3>
+                        <p class="text-gray-400 mb-8 leading-relaxed">Software de fidelización para negocios locales.
+                            Backend robusto en Node.js, cifrado de datos y automatización de reportes PDF semanales.</p>
+                    </div>
+                    <a href="https://fidely-landing-woad.vercel.app/" target="_blank"
+                        class="bg-cyan-500 text-black px-6 py-3 rounded-2xl font-bold hover:bg-cyan-400 transition-all shadow-[0_0_20px_rgba(6,182,212,0.4)] w-fit">
+                        Visitar Proyecto <i class="fa-solid fa-arrow-up-right-from-square ml-2 text-xs"></i>
+                    </a>
+                </div>
+
+                <div class="glass p-8 md:p-10 rounded-[2rem] flex flex-col justify-between" data-aos="zoom-in-left">
+                    <div>
+                        <span class="text-xs text-cyan-500 uppercase tracking-widest font-bold">Travel Tech</span>
+                        <h3 class="text-2xl md:text-3xl font-bold my-4 text-white">Lokyo App</h3>
+                        <p class="text-gray-400 mb-8 leading-relaxed">Plataforma para conectar turistas con guías
+                            locales. Arquitectura orientada a la velocidad y optimización de carga móvil.</p>
+                    </div>
+                    <a href="https://lokyo.vercel.app/" target="_blank"
+                        class="border border-cyan-500/30 text-cyan-400 px-6 py-3 rounded-2xl font-bold hover:bg-cyan-500/10 transition-colors w-fit">
+                        Visitar App <i class="fa-solid fa-arrow-up-right-from-square ml-2 text-xs"></i>
+                    </a>
+                </div>
+
+                <div class="glass lg:col-span-2 p-8 md:p-10 rounded-[2rem] relative overflow-hidden"
+                    data-aos="zoom-in-up">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-cyan-500/5 blur-3xl"></div>
+                    <span class="text-xs text-cyan-500 uppercase tracking-widest font-bold">Inteligencia
+                        Artificial</span>
+                    <h3 class="text-2xl md:text-3xl font-bold my-4 text-white">Detección de emociones (YOLO)</h3>
+                    <p class="text-gray-400 leading-relaxed">Entrenamiento de modelo de visión por computador utilizando
+                        TensorFlow para clasificación en tiempo real aplicada a visión artificial.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="experiencia" class="max-w-4xl mx-auto px-6 py-24">
+            <div class="space-y-20">
+                <div data-aos="fade-up">
+                    <div class="flex flex-col md:flex-row justify-between mb-6 items-start md:items-end gap-2">
+                        <div>
+                            <h4 class="text-cyan-500/50 text-xs uppercase tracking-widest mb-1">Experiencia Profesional
+                            </h4>
+                            <h3 class="text-2xl md:text-3xl font-bold text-white leading-tight">Desarrollador Web</h3>
+                        </div>
+                        <div class="md:text-right">
+                            <p class="text-cyan-400 font-bold">HEX S.A.</p>
+                            <p class="text-gray-500 text-sm">Quito | 2020 — 2023</p>
+                        </div>
+                    </div>
+                    <ul
+                        class="text-gray-400 space-y-3 border-l-2 border-cyan-500/30 pl-6 text-sm md:text-base leading-relaxed">
+                        <li>• Liderazgo de proyectos tecnológicos completos (análisis, diseño, desarrollo).</li>
+                        <li>• Interlocución con clientes para levantamiento de requerimientos técnicos.</li>
+                        <li>• Integración de aplicaciones web con servicios externos mediante APIs REST.</li>
+                        <li>• Coordinación de equipos técnicos cumpliendo plazos de calidad.</li>
+                    </ul>
+                </div>
+
+                <div data-aos="fade-up">
+                    <div class="flex flex-col md:flex-row justify-between mb-6 items-start md:items-end gap-2">
+                        <div>
+                            <h4 class="text-cyan-500/50 text-xs uppercase tracking-widest mb-1">Experiencia Profesional
+                            </h4>
+                            <h3 class="text-2xl md:text-3xl font-bold text-white leading-tight">Supervisor de
+                                Laboratorio RF</h3>
+                        </div>
+                        <div class="md:text-right">
+                            <p class="text-cyan-400 font-bold">Escuela Politécnica Nacional</p>
+                            <p class="text-gray-500 text-sm">Quito | 2022 — 2023</p>
+                        </div>
+                    </div>
+                    <ul
+                        class="text-gray-400 space-y-3 border-l-2 border-cyan-500/30 pl-6 text-sm md:text-base leading-relaxed">
+                        <li>• Coordinación de entornos técnicos complejos y optimización de procesos operativos.</li>
+                        <li>• Gestión de recursos e inventario de infraestructura tecnológica.</li>
+                        <li>• Soporte técnico especializado a proyectos tecnológicos de grado.</li>
+                        <li>• Implementación de metodologías para asegurar calidad en sistemas de comunicaciones.</li>
+                    </ul>
+                </div>
+
+                <div data-aos="fade-up" class="pt-10">
+                    <h3 class="text-xl font-bold mb-10 flex items-center gap-4 text-white">
+                        <span class="w-10 h-[1px] bg-cyan-500/50"></span> Formación Académica
+                    </h3>
+                    <div class="space-y-8">
+                        <div class="flex flex-col md:flex-row justify-between gap-2">
+                            <div>
+                                <p class="text-white font-bold">Máster en Telecomunicaciones</p>
+                                <p class="text-gray-500 text-sm">Universidad de Sevilla</p>
+                            </div>
+                            <p class="text-cyan-500/50 text-sm">2024 — Presente</p>
+                        </div>
+                        <div class="flex flex-col md:flex-row justify-between gap-2">
+                            <div>
+                                <p class="text-white font-bold">Ingeniería en Telecomunicaciones</p>
+                                <p class="text-gray-500 text-sm">Escuela Politécnica Nacional</p>
+                            </div>
+                            <p class="text-gray-500 text-sm">2017 — 2023</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 pt-10" data-aos="fade-up">
+                    <div>
+                        <h3 class="text-xl font-bold mb-6 text-white">Certificaciones 2024</h3>
+                        <ul class="text-sm text-gray-400 space-y-3">
+                            <li><i class="fa-solid fa-certificate mr-2 text-cyan-400"></i> Networking Devices & Config
+                                (Cisco)</li>
+                            <li><i class="fa-solid fa-certificate mr-2 text-cyan-400"></i> Introduction to Cybersecurity
+                                (Cisco)</li>
+                            <li><i class="fa-solid fa-certificate mr-2 text-cyan-400"></i> Networking (Junio/Julio 2024)
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-6 text-white">Idiomas</h3>
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-300">Español</span>
+                                <span
+                                    class="text-[10px] text-cyan-500 border border-cyan-500/30 px-2 py-0.5 rounded uppercase tracking-wider">Nativo</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-300">Inglés</span>
+                                <span
+                                    class="text-[10px] text-cyan-500 border border-cyan-500/30 px-2 py-0.5 rounded uppercase tracking-wider">B2</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-300">Francés</span>
+                                <span
+                                    class="text-[10px] text-gray-500 border border-white/10 px-2 py-0.5 rounded uppercase tracking-wider">A1</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer id="contacto" class="py-32 text-center border-t border-white/5 px-6">
+            <div data-aos="zoom-in">
+                <h2 class="text-5xl md:text-7xl font-bold mb-8 tracking-tighter text-gradient footer-title">
+                    ¿Hablamos?
+                </h2>
+                <a href="mailto:andre.naranjo18@hotmail.com"
+                    class="text-lg md:text-2xl text-white hover:text-cyan-400 transition-colors block mb-12 font-light tracking-wide break-words">
+                    andre.naranjo18@hotmail.com
+                </a>
+                <div class="flex justify-center gap-10 mb-16">
+                    <a href="https://linkedin.com/in/andre-naranjo18" target="_blank"
+                        class="text-gray-500 hover:text-cyan-400 hover:scale-110 transition-all text-2xl"><i
+                            class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/andrealex-74" target="_blank"
+                        class="text-gray-500 hover:text-cyan-400 hover:scale-110 transition-all text-2xl"><i
+                            class="fa-brands fa-github"></i></a>
+                </div>
+                <p class="text-[10px] text-gray-700 uppercase tracking-[0.3em] font-medium">Granada, España | 2024</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 900,
+            easing: 'ease-out',
+            once: true
+        });
+    </script>
+</body>
+
+</html>
